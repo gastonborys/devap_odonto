@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Fichas</string>
+    <string name="mnu_buscar">Buscar</string>
+    <string name="Agregar">Agregar</string>
+    <string name="title_activity_agregar">Agregar Ficha</string>
+    <string name="title_activity_editar">Editar Ficha</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+    <string name="CampoNombre">Nombre</string>
+    <string name="CampoApellido">Apellido</string>
+    <string name="CampoFicha">Ficha</string>
+    <string name="CampoNacimiento">Nacimiento</string>
+    <string name="CampoTelefono">Teléfono</string>
+    <string name="CampoDireccion">Dirección</string>
+    <string name="Limpiadb">Limpiar base de datos</string>
+    <string name="ActualizaListado">Actualizar Listado</string>
+    <string name="Modificar">Modificar</string>
+    <string name="Elimina">Eliminar</string>
+</resources>

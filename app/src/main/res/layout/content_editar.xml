@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".EditarActivity"
+    tools:showIn="@layout/activity_editar">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="@string/CampoNombre"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/txtENombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/CampoNombre"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:paddingLeft="4dp"
+                    android:text="@string/CampoApellido"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/txtEApellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/CampoApellido"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="@string/CampoDireccion"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/txtEDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/CampoDireccion"
+                    android:inputType="textPostalAddress"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="@string/CampoTelefono"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/txtETelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/CampoTelefono"
+                    android:inputType="text|phone"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="39dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="@string/CampoFicha"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/txtEFicha"
+                    android:layout_width="120dp"
+                    android:layout_height="39dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/CampoFicha"
+                    android:inputType="number"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="@string/CampoNacimiento"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/txtEFechanac"
+                    android:layout_width="120dp"
+                    android:layout_height="39dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/CampoNacimiento"
+                    android:inputType="date"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

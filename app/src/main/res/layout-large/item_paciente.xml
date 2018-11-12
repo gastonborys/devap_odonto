@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="0dp"
+    android:paddingTop="10dp"
+    android:layout_height="40dp"
+    >
+
+    <TextView
+        android:id="@+id/cpoId"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingLeft="1dp"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/cpoFicha"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:paddingRight="8dp"
+        android:textAlignment="textEnd"
+        />
+
+    <TextView
+        android:id="@+id/cpoApellido"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="2dp"
+         />
+
+    <TextView
+        android:id="@+id/cpoNombre"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="2dp"
+        />
+
+    <TextView
+        android:id="@+id/cpoFechanac"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="2dp"
+         />
+
+    <TextView
+        android:id="@+id/cpoTelefono"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="2dp"
+        />
+
+</LinearLayout>

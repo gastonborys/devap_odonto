@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.develap.fichas.EditarActivity">
+
+    <item
+        android:orderInCategory="1"
+        android:title="@string/Modificar"
+        android:icon="@drawable/ic_action_save"
+        android:onClick="Modificar"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:orderInCategory="1"
+        android:title="@string/Elimina"
+        android:icon="@drawable/ic_action_delete"
+        android:onClick="Eliminar"
+        app:showAsAction="ifRoom" />
+</menu>

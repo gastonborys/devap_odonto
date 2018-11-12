@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.develap.fichas.MainActivity">
+
+    <item
+        android:id="@+id/action_add"
+        android:orderInCategory="1"
+        android:title="@string/Agregar"
+        android:icon="@drawable/ic_action_add"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="2"
+        android:title="@string/ActualizaListado"
+        android:icon="@drawable/ic_action_refresh"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="3"
+        android:title="@string/mnu_buscar"
+        android:icon="@drawable/ic_action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_restart"
+        android:orderInCategory="100"
+        android:title="@string/Limpiadb"
+        android:icon="@drawable/ic_action_truncate"
+        app:showAsAction="never" />
+</menu>

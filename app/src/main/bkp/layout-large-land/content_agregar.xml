@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_anchorGravity="center_vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AgregarActivity"
+    tools:showIn="@layout/activity_agregar">
+
+    <TextView
+        android:id="@+id/lblNombre"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/CampoNombre"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="685dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/CampoNombre"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/lblApellido"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center_vertical"
+        android:text="@string/CampoApellido"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/txtApellido"
+        android:layout_width="685dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="64dp"
+        android:hint="@string/CampoApellido"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lblDireccion"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="112dp"
+        android:gravity="center_vertical"
+        android:text="@string/CampoDireccion"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/txtDireccion"
+        android:layout_width="685dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="112dp"
+        android:hint="@string/CampoDireccion"
+        android:inputType="textPostalAddress"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lblTelefono"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
+        android:gravity="center_vertical"
+        android:text="@string/CampoTelefono"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/txtTelefono"
+        android:layout_width="685dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="160dp"
+        android:hint="@string/CampoTelefono"
+        android:inputType="text|phone"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lblFicha"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="208dp"
+        android:gravity="center_vertical"
+        android:text="@string/CampoFicha"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/txtFicha"
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="208dp"
+        android:hint="@string/CampoFicha"
+        android:inputType="number"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/lblFechanac"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="256dp"
+        android:gravity="center_vertical"
+        android:text="@string/CampoNacimiento"
+        android:textSize="14sp"
+        />
+
+
+    <EditText
+        android:id="@+id/txtFechanac"
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="256dp"
+        android:hint="@string/CampoNacimiento"
+        android:inputType="date"
+        android:textSize="14sp"
+        />
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="363dp"
+        android:onClick="Agregar"
+        android:text="@string/Agregar" />
+
+
+</RelativeLayout>
