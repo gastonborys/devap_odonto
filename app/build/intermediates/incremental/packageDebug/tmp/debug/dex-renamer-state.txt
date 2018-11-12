@@ -1,4 +1,0 @@
-#Mon Nov 12 13:46:22 ART 2018
-base.0=/home/murdok/AndroidStudioProjects/Fichas/app/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex

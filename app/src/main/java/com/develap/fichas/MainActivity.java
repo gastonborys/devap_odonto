@@ -83,14 +83,12 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public boolean onQueryTextSubmit(String query) {
-
                         return false;
                     }
 
                     @Override
                     public boolean onQueryTextChange(String newText) {
                         adapter.getFilter().filter(newText);
-
                         return false;
                     }
                 });
@@ -150,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
         listado = new ArrayList<>();
         adapter = new ListadoPacientes(this, listado);
         int i = cursor.getCount();
-        Log.i("Contador de registros: ", Integer.toString(i));
         while(cursor.moveToNext())
         {
             String fechanac = "N/D";

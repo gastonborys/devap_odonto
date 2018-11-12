@@ -26,7 +26,7 @@
 
     <TextView
         android:id="@+id/cpoApellido"
-        android:layout_width="180dp"
+        android:layout_width="175dp"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
         android:paddingLeft="1dp"
@@ -34,7 +34,7 @@
 
     <TextView
         android:id="@+id/cpoNombre"
-        android:layout_width="180dp"
+        android:layout_width="175dp"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
         android:paddingLeft="1dp"
