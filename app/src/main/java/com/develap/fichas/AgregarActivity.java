@@ -63,15 +63,60 @@ public class AgregarActivity extends AppCompatActivity {
 
         Toast toast;
         String fechanac = "";
+        String fecha = txtFechanac.getText().toString();
+        fecha = fecha.replace('.', '/').replace('-', '/');
+        Date date = new Date(), today = new Date();
+
         try {
             DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-            Date date = format.parse(txtFechanac.getText().toString());
+            date = format.parse(fecha);
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             fechanac = df.format(date);
         }
         catch(Exception e)
         {
             e.printStackTrace();
+        }
+
+        if (txtNombre.getText().toString().isEmpty())
+        {
+            toast = Toast.makeText(this, "El valor del campo \"Nombre\" no es válido", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0,0);
+            toast.show();
+            return;
+        }
+
+        if (txtApellido.getText().toString().isEmpty())
+        {
+            toast = Toast.makeText(this, "El valor del campo \"Apellido\" no es válido", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0,0);
+            toast.show();
+            return;
+        }
+
+        try {
+            if (Integer.parseInt(txtFicha.getText().toString()) == 0) {
+                toast = Toast.makeText(this, "El valor del campo \"Ficha\" no es válido", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return;
+            }
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+            toast = Toast.makeText(this, "El valor del campo \"Ficha\" no es válido", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+            return;
+        }
+
+
+        if (date.after(today) || date == today)
+        {
+            toast = Toast.makeText(this, "El valor del campo \"Nacimiento\" no es válido", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0,0);
+            toast.show();
+            return;
         }
 
         SQLiteDatabase db = dbsqlite.getWritableDatabase();
@@ -90,6 +135,7 @@ public class AgregarActivity extends AppCompatActivity {
         txtFicha.setText("");
         txtDireccion.setText("");
         txtTelefono.setText("");
+        txtNombre.requestFocus();
         toast = Toast.makeText(this, "Registro añadido correctamente", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0,0);
         toast.show();

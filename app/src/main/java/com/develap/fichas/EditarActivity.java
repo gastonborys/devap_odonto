@@ -128,7 +128,8 @@ public class EditarActivity extends AppCompatActivity {
                 toast = Toast.makeText(context, "Ficha eliminada", (int) Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER,0,0);
                 toast.show();
-                ((EditarActivity) context).finish();
+                EditarActivity.super.onBackPressed();
+
             }
         });
 
@@ -147,15 +148,19 @@ public class EditarActivity extends AppCompatActivity {
     }
 
     public void Modificar(MenuItem item) {
+        Toast toast;
         String fechanac = "";
         SQLiteDatabase db = dbsqlite.getWritableDatabase();
         ContentValues values = new ContentValues();
         String where = "id = ?";
         String[] like = {this.ID};
+        String fecha = txtFechanac.getText().toString();
+        Date date = new Date(), today = new Date();
 
+        fecha = fecha.replace('.', '/').replace('-', '/');
         try {
             DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-            Date date = format.parse(txtFechanac.getText().toString());
+            date = format.parse(fecha);
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             fechanac = df.format(date);
         }
@@ -164,6 +169,45 @@ public class EditarActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        if (txtNombre.getText().toString().isEmpty())
+        {
+            toast = Toast.makeText(this, "El valor del campo \"Nombre\" no es válido", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0,0);
+            toast.show();
+            return;
+        }
+
+        if (txtApellido.getText().toString().isEmpty())
+        {
+            toast = Toast.makeText(this, "El valor del campo \"Apellido\" no es válido", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0,0);
+            toast.show();
+            return;
+        }
+
+        try {
+            if (Integer.parseInt(txtFicha.getText().toString()) == 0) {
+                toast = Toast.makeText(this, "El valor del campo \"Ficha\" no es válido", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return;
+            }
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+            toast = Toast.makeText(this, "El valor del campo \"Ficha\" no es válido", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+            return;
+        }
+
+        if (date.after(today) || date == today)
+        {
+            toast = Toast.makeText(this, "El valor del campo \"Nacimiento\" no es válido", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0,0);
+            toast.show();
+            return;
+        }
 
         values.put("apellido", txtApellido.getText().toString());
         values.put("nombre", txtNombre.getText().toString());
@@ -173,7 +217,7 @@ public class EditarActivity extends AppCompatActivity {
         values.put("telefono", txtTelefono.getText().toString());
         db.update("pacientes", values, where, like );
 
-        Toast toast = Toast.makeText(this, "Registro modificado correctamente", Toast.LENGTH_LONG);
+        toast = Toast.makeText(this, "Registro modificado correctamente", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0,0);
         toast.show();
     }
